@@ -1,0 +1,62 @@
+create table equipos(
+nombre varchar2 (255),--primary key
+telefono int,
+direccion  varchar2(255),
+constraint pk_id_equipo primary key (nombre)
+);
+create table empleados(
+dni number,--primary key
+nombre_c varchar2 (255),
+fecha_n date,
+constraint pk_id_empleado primary key(dni)
+
+);
+create table pabellones(
+    id int,--primary key
+    direccion varchar2 (255),
+    telefono varchar2 (255),
+    capacidad int,
+
+constraint pk_id_pabellon primary key(id)
+);
+
+create table partidos(
+    id number,--primary key
+    resultado int,
+
+    constraint pk_id_partido primary key(id)
+);
+create table jugadores(
+id_jugador int,
+base varchar2 (255),
+ala_pivot varchar2 (255),
+escolta varchar2 (255),
+alero  varchar2 (255),
+pivot varchar2 (255),
+
+constraint pk_id_jugador primary key(id_jugador)
+);
+
+create table otros(
+es_id_otro int,
+es_presidente varchar2 (255),
+es_preparador varchar2 (255),
+es_mantto varchar2 (255),
+es_entrenador varchar2 (255),
+es_admin varchar2 (255), 
+es_directivo varchar2 (255),
+
+constraint pk_id_otro primary key(es_id_otro)
+);
+
+
+/*create table jugadas(
+id_jugadas int,
+min_jug int check(faltas <=5),
+faltas_c int, 
+reb_d int check(tiros>0),
+reb_a int check (tiros>0),
+tirtos_lib_1 int check (tiros>0),
+tiros_lib_a
+constraint pk_id_otro primary key(es_id_otro)
+);
